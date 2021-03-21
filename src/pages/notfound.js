@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 
-// import { Container } from './styles';
+// import { Container } from './styles' 10:32;
 
 function NotFound() {
   useEffect(() => {
