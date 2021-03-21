@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Header, Timeline, Sidebar } from "../components";
+import useUser from "../hooks/use-user";
 
 // import { Container } from './styles';
 
-function Dashboard() {
+function Dashboard({ user }) {
   useEffect(() => {
     document.title = "Instagram";
   }, []);

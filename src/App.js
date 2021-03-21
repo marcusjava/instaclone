@@ -5,7 +5,6 @@ import { LOGIN, DASHBOARD, SIGN_UP, PROFILE } from "./constants/routes";
 import useAuthListener from "./hooks/use-auth-listener";
 import UserContext from "./context/user";
 import ProtectedRoute from "./helpers/protectedRoute";
-import IsUserLoggedIn from "./helpers/isUserLoggedIn";
 //import * as ROUTES from './constants/routes'
 //07:33
 
@@ -29,12 +28,8 @@ function App() {
               <Profile />
             </ProtectedRoute>
             <Route path={PROFILE} component={Profile} />
-            <IsUserLoggedIn user={user} loggedInPath={DASHBOARD} path={LOGIN}>
-              <Login />
-            </IsUserLoggedIn>
-            <IsUserLoggedIn user={user} loggedInPath={DASHBOARD} path={SIGN_UP}>
-              <SignUp />
-            </IsUserLoggedIn>
+            <Route component={Login} path={LOGIN} />
+            <Route component={SignUp} path={SIGN_UP} />
             <Route component={NotFound} />
           </Switch>
         </Suspense>
