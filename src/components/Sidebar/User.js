@@ -6,7 +6,6 @@ import Skeleton from "react-loading-skeleton";
 // import { Container } from './styles';
 
 function User({ username, fullName }) {
-  console.log("com memo");
   return !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (

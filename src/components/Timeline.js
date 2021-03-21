@@ -11,7 +11,6 @@ import Post from "../components/Post";
 
 function Timeline() {
   const { photos } = usePhotos();
-  console.log("photos", photos);
 
   return (
     <div className="container col-span-2">

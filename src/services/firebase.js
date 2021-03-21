@@ -70,12 +70,6 @@ export const updateFollowedUserFollowers = async (
   userId,
   isFollowingProfile
 ) => {
-  console.log(
-    "user profile",
-    suggestedProfileDocId,
-    userId,
-    isFollowingProfile
-  );
   return firebase
     .firestore()
     .collection("users")
